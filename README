@@ -1,0 +1,49 @@
+# prequistics:
+Docker installed and login to account
+
+# for building docker image 
+# Run the start.sh
+sh start.sh
+
+# it will build the docker image with name sim-checker-flask-app and start it on port 5000
+
+# Running API:
+
+POST: http://localhost:5000/cal_sim
+Request: 
+
+{
+    "text1":"tssd sd asd asd asd ",
+    "text2":"tssds asd sd ad asd s"
+}
+
+Response:
+{
+    "Similarity": 1.0
+}
+
+
+# You can also use to run the commands on docker_commands.sh to push the image to docker hub
+
+
+# RUNNING locally 
+
+#install all packages from requirements.txt
+pip install -r requirements.txt
+
+# Start the FLASK app
+
+python app.py
+
+POST: http://localhost:5000/cal_sim
+Request: 
+
+{
+    "text1":"tssd sd asd asd asd ",
+    "text2":"tssds asd sd ad asd s"
+}
+
+Response:
+{
+    "Similarity": 1.0
+}
